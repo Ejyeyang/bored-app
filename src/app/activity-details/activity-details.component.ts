@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Activity } from '../_models/activity';
 import { ApiService } from '../_services/api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from '../_services/api.service';
   ]
 })
 export class ActivityDetailsComponent implements OnInit {
-  activity: any = {};
+  activity?: Activity;
   constructor(
     private apiService: ApiService
   ) { }

@@ -1,8 +1,14 @@
 <div class="row">
   <div class="col-md-8 offset-md-2 text-center">
-    <h1>
-      {{activity.activity}}
-    </h1>
+    <div class="card" style="width: 18rem">
+      <img class="card-img-top" src="..." alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{ activity.type }}</h5>
+        <p class="card-text">
+          {{activity.activity}}
+        </p>
+        <h6>Number of participants: {{activity.participants}}</h6>
+      </div>
+    </div>
   </div>
 </div>
-

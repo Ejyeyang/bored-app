@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Activity } from '../_models/activity';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,6 @@ export class ApiService {
   ) { }
 
   getActivity(){
-    return this.http.get<any>(this.baseUrl);
+    return this.http.get<Activity>(this.baseUrl);
   }
 }

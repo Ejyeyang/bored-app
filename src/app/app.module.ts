@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ActivityDetailsComponent } from './activity-details/activity-details.component';
+import { ActivityFormComponent } from './activity-form/activity-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ActivityDetailsComponent
+    ActivityDetailsComponent,
+    ActivityFormComponent
   ],
   imports: [
     BrowserModule,
