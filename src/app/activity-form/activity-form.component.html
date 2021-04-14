@@ -1,8 +1,18 @@
 <div class="text-center">
   <form>
-    <div>
-      <label></label>
-      <button class="btn btn-outline-primary">Test</button>
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="col-xs-12">
+          <label for="exampleFormControlSelect1">Example select</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option selected></option>
+            <option *ngFor="let type of types">{{type}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <button class="btn btn-outline-primary">Test</button>
+      </div>
     </div>
   </form>
 </div>

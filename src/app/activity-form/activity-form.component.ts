@@ -3,14 +3,22 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-activity-form',
   templateUrl: './activity-form.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class ActivityFormComponent implements OnInit {
+  types: string[] = [
+    'education',
+    'recreational',
+    'social',
+    'diy',
+    'charity',
+    'cooking',
+    'relaxation',
+    'music',
+    'busywork',
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
