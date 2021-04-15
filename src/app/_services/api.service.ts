@@ -6,18 +6,20 @@ import { Activity } from '../_models/activity';
   providedIn: 'root'
 })
 export class ApiService {
-  baseUrl = 'https://www.boredapi.com/api/activity/';
-
+  baseUrl = 'https://www.boredapi.com/api/activity';
+  formData: Activity;
+  activity?: Activity;
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getActivity(type?: string){
-    if(type === null || type === ""){
+  getActivity(form?: Activity){
+    if(form.type === null || form.type === ""){
       return this.http.get<Activity>(this.baseUrl);
     } else {
-      return this.http.get<Activity>(this.baseUrl + 'activity?type=' + type);
+      console.log(this.formData.type);
+      return this.http.get<Activity>(this.baseUrl + '?type=' + form.type.toString());
     }
   }
 }

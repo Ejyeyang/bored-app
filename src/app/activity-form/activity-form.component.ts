@@ -24,10 +24,33 @@ export class ActivityFormComponent implements OnInit {
     public apiService: ApiService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.formReset();
+  }
+
+  formReset(form?: NgForm){
+    if(form != null){
+      form.resetForm();
+    } else {
+      this.apiService.formData ={
+        activity: '',
+        type: '',
+        participants: null,
+        price: null,
+        link: '',
+        key: '',
+        accessibility: null
+      };
+    }
+  }
 
   onSubmit(form: NgForm){
-
+    this.apiService.getActivity(form.value).subscribe(res => {
+      this.apiService.activity = res;
+      console.log(this.apiService.activity);
+    }, error => {
+      console.log(error);
+    });
   }
 
 

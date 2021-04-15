@@ -9,9 +9,8 @@ import { ApiService } from '../_services/api.service';
   ]
 })
 export class ActivityDetailsComponent implements OnInit {
-  activity?: Activity;
   constructor(
-    private apiService: ApiService
+    public apiService: ApiService
   ) { }
 
   ngOnInit(): void {
@@ -20,8 +19,8 @@ export class ActivityDetailsComponent implements OnInit {
 
   getActivity(){
     this.apiService.getActivity().subscribe(res => {
-      this.activity = res;
-      console.log(this.activity);
+      this.apiService.activity = res;
+      console.log(this.apiService.activity);
     }, error => {
       console.log(error);
     });
