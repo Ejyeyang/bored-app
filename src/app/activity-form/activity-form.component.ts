@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { ApiService } from '../_services/api.service';
 
 @Component({
   selector: 'app-activity-form',
@@ -18,7 +20,15 @@ export class ActivityFormComponent implements OnInit {
     'busywork',
   ];
 
-  constructor() {}
+  constructor(
+    public apiService: ApiService
+  ) {}
 
   ngOnInit(): void {}
+
+  onSubmit(form: NgForm){
+
+  }
+
+
 }

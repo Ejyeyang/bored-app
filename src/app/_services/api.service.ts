@@ -13,7 +13,11 @@ export class ApiService {
     private http: HttpClient
   ) { }
 
-  getActivity(){
-    return this.http.get<Activity>(this.baseUrl);
+  getActivity(type?: string){
+    if(type === null || type === ""){
+      return this.http.get<Activity>(this.baseUrl);
+    } else {
+      return this.http.get<Activity>(this.baseUrl + 'activity?type=' + type);
+    }
   }
 }
