@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ActivityDetailsComponent } from './activity-details/activity-details.component';
 import { ActivityFormComponent } from './activity-form/activity-form.component';
 import { FormsModule } from '@angular/forms';
+import { FormTestComponent } from './form-test/form-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActivityDetailsComponent,
-    ActivityFormComponent
+    ActivityFormComponent,
+    FormTestComponent
   ],
   imports: [
     BrowserModule,

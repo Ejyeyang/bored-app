@@ -1,0 +1,117 @@
+<!--template driven approach-->
+<form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white"></div>
+      </div>
+      <input
+        name="activity"
+        #activity="ngModel"
+        [(ngModel)]="service.formData.activity"
+        class="form-control"
+        placeholder="Activity"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white"></div>
+      </div>
+      <select
+        [(ngModel)]="service.formData.type"
+        #type="ngModel"
+        name="type"
+        class="form-control"
+      >
+        <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white"></div>
+      </div>
+      <input
+        [(ngModel)]="service.formData.participants"
+        #participants="ngModel"
+        name="participants"
+        class="form-control"
+        placeholder="participants"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white"></div>
+      </div>
+      <input
+        [(ngModel)]="service.formData.price"
+        #price="ngModel"
+        name="price"
+        class="form-control"
+        placeholder="price"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white"></div>
+      </div>
+      <input
+        [(ngModel)]="service.formData.link"
+        #link="ngModel"
+        name="link"
+        class="form-control"
+        placeholder="link"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white"></div>
+      </div>
+      <input
+        [(ngModel)]="service.formData.key"
+        #key="ngModel"
+        name="key"
+        class="form-control"
+        placeholder="key"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white"></div>
+      </div>
+      <input
+        [(ngModel)]="service.formData.accessibility"
+        #accessibility="ngModel"
+        name="accessibility"
+        class="form-control"
+        placeholder="accessibility"
+      />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <button type="submit" class="btn btn-outline-success btn-block bt-lg mr-2">Submit</button>
+    </div>
+    <div class="form-group col-md-6">
+      <button type="button" class="btn btn-outline-warning btn-block bt-lg">Cancel</button>
+    </div>
+  </div>
+</form>
