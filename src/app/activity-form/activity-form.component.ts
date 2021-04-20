@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { ApiService } from '../_services/api.service';
 
 @Component({
@@ -21,7 +22,8 @@ export class ActivityFormComponent implements OnInit {
   ];
 
   constructor(
-    public apiService: ApiService
+    public apiService: ApiService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
