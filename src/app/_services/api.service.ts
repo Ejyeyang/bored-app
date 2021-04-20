@@ -9,7 +9,6 @@ import { Activity } from '../_models/activity';
 export class ApiService {
   baseUrl = 'https://www.boredapi.com/api/activity';
   formData: Activity;
-  activity?: Activity;
 
   activityActivated = new Subject<Activity>();
 
@@ -18,11 +17,15 @@ export class ApiService {
   ) { }
 
   getActivity(form?: Activity){
-    if(form.type === ''){
-      return this.http.get<Activity>(this.baseUrl);
-    } else {
-      console.log(this.formData.type);
+    if(form.type !== ''){
+      console.log(form);
       return this.http.get<Activity>(this.baseUrl + '?type=' + form.type.toString());
+    } else if(form.participants !== null){
+      console.log(form);
+      return this.http.get<Activity>(this.baseUrl + '?participants=' + form.participants);
+    } else {
+      console.log(form);
+      return this.http.get<Activity>(this.baseUrl);
     }
   }
 }

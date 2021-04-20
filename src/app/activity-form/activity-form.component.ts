@@ -48,7 +48,7 @@ export class ActivityFormComponent implements OnInit {
   onSubmit(form: NgForm){
     this.apiService.getActivity(form.value).subscribe(res => {
       this.apiService.activityActivated.next(res);
-      console.log(this.apiService.activity);
+      this.formReset();
     }, error => {
       console.log(error);
     });

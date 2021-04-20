@@ -20,18 +20,9 @@ export class ActivityDetailsComponent implements OnInit {
       this.activityActivated = res;
     }, error => {
       console.log(error);
-    })
-  }
-
-
-
-  getActivity(){
-    this.apiService.getActivity().subscribe(res => {
-      this.apiService.activity = res;
-      console.log(this.apiService.activity);
-    }, error => {
-      console.log(error);
     });
   }
+
+
 
 }
