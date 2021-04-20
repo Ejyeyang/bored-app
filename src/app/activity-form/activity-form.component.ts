@@ -28,6 +28,7 @@ export class ActivityFormComponent implements OnInit {
     this.formReset();
   }
 
+
   formReset(form?: NgForm){
     if(form != null){
       form.resetForm();
@@ -46,7 +47,7 @@ export class ActivityFormComponent implements OnInit {
 
   onSubmit(form: NgForm){
     this.apiService.getActivity(form.value).subscribe(res => {
-      this.apiService.activity = res;
+      this.apiService.activityActivated.next(res);
       console.log(this.apiService.activity);
     }, error => {
       console.log(error);

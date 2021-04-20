@@ -9,13 +9,21 @@ import { ApiService } from '../_services/api.service';
   ]
 })
 export class ActivityDetailsComponent implements OnInit {
+  activityActivated: Activity;
+
   constructor(
     public apiService: ApiService
   ) { }
 
   ngOnInit(): void {
-    this.getActivity();
+    this.apiService.activityActivated.subscribe(res => {
+      this.activityActivated = res;
+    }, error => {
+      console.log(error);
+    })
   }
+
+
 
   getActivity(){
     this.apiService.getActivity().subscribe(res => {

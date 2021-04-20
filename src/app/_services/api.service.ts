@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Activity } from '../_models/activity';
 
 @Injectable({
@@ -10,12 +11,14 @@ export class ApiService {
   formData: Activity;
   activity?: Activity;
 
+  activityActivated = new Subject<Activity>();
+
   constructor(
     private http: HttpClient
   ) { }
 
   getActivity(form?: Activity){
-    if(form.type === null || form.type === ""){
+    if(form.type === ''){
       return this.http.get<Activity>(this.baseUrl);
     } else {
       console.log(this.formData.type);
