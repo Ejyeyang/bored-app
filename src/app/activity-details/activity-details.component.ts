@@ -10,13 +10,20 @@ import { ApiService } from '../_services/api.service';
 })
 export class ActivityDetailsComponent implements OnInit {
   activityActivated: Activity;
+  activitySelected = false;
 
   constructor(
     public apiService: ApiService
   ) { }
 
   ngOnInit(): void {
+    this.apiService.activitySelected.subscribe(res => {
+      this.activitySelected = res;
+    }, error => {
+      console.log(error);
+    });
     this.apiService.activityActivated.subscribe(res => {
+      this.activitySelected = true;
       this.activityActivated = res;
     }, error => {
       console.log(error);

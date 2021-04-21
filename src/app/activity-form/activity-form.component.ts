@@ -9,6 +9,9 @@ import { ApiService } from '../_services/api.service';
   styles: [],
 })
 export class ActivityFormComponent implements OnInit {
+  DropDownTouched: boolean = null;
+  InputTouched: boolean = null;
+
   constructor(
     public apiService: ApiService,
     private toastr: ToastrService
@@ -33,12 +36,13 @@ export class ActivityFormComponent implements OnInit {
         accessibility: null
       };
     }
+    this.apiService.activitySelected.next(false);
   }
+
 
   onSubmit(form: NgForm){
     this.apiService.getActivity(form.value).subscribe(res => {
       this.apiService.activityActivated.next(res);
-      this.formReset();
     }, error => {
       console.log(error);
     });
