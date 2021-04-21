@@ -10,6 +10,17 @@ import { Activity } from '../_models/activity';
 export class ApiService {
   baseUrl = 'https://www.boredapi.com/api/activity';
   formData: Activity;
+  types: string[] = [
+    'education',
+    'recreational',
+    'social',
+    'diy',
+    'charity',
+    'cooking',
+    'relaxation',
+    'music',
+    'busywork',
+  ];
 
   activityActivated = new Subject<Activity>();
 

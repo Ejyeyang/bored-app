@@ -9,18 +9,6 @@ import { ApiService } from '../_services/api.service';
   styles: [],
 })
 export class ActivityFormComponent implements OnInit {
-  types: string[] = [
-    'education',
-    'recreational',
-    'social',
-    'diy',
-    'charity',
-    'cooking',
-    'relaxation',
-    'music',
-    'busywork',
-  ];
-
   constructor(
     public apiService: ApiService,
     private toastr: ToastrService

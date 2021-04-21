@@ -23,7 +23,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
-      //positionClass: 'toast-bottom-right'
     })
   ],
   providers: [],
