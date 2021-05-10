@@ -1,4 +1,4 @@
-<div class="row" *ngIf="activitySelected">
+<div class="row" *ngIf="activityActivated != null">
   <div class="col-md-8 offset-md-2 text-center">
     <div class="card" style="width: 18rem">
       <img style="height: fit-content" class="card-img-top" [src]="returnPictureBasedOnType(activityActivated?.type)" alt="Card image cap" />

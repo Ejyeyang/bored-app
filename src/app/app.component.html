@@ -1,16 +1,62 @@
-<div class="container-fluid">
-  <div class="row my-5">
-    <div class="col-md-4 offset-md-4" style="margin-top: 100px;">
-      <h1 style="text-align: center;">Are you bored?</h1>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-md-4 text-center">
-      <app-activity-form></app-activity-form>
-    </div>
-    <div class="col-md-4 text-center">
-      <app-activity-details></app-activity-details>
+
+
+<div class="banner-area">
+  <div class="content-area">
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8 justify-content-center">
+            <h1 style="text-align: center;">Are you bored?</h1>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-4 text-center">
+            <app-activity-form></app-activity-form>
+          </div>
+          <div class="col-md-4 text-center">
+            <app-activity-details></app-activity-details>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .banner-area {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80);
+    background-size: cover;
+  }
+
+  .content-area{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content{
+    text-align:center;
+  }
+
+  .content h1{
+    font-size: 80px;
+    color: #fff;
+  }
+
+  .content h6{
+    font-size: 30px;
+    color: #ddd;
+  }
+</style>
+
 

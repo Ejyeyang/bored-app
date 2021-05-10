@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { ActivityDetailsComponent } from './activity-details/activity-details.component';
 import { ActivityFormComponent } from './activity-form/activity-form.component';
 import { FormsModule } from '@angular/forms';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActivityDetailsComponent,
     ActivityFormComponent,
+    IntroComponent,
   ],
   imports: [
     BrowserModule,

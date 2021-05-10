@@ -1,12 +1,11 @@
-export class Activity {
-  constructor(
-    public activity: string,
-    public type: string,
-    public participants: number,
-    public price: number,
-    public link: string,
-    public key: string,
-    public accessibility: number
-  ){}
+export interface Activity {
+    activity: string;
+    type: string;
+    participants: number;
+    price: number;
+    link: string;
+    key: string;
+    accessibility: number;
+
 }
 
